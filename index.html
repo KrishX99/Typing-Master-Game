@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Typing Master</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body background = "https://avante.biz/wp-content/uploads/Keyboard-Wallpaper/Keyboard-Wallpaper-036.jpg" class="text-dark" style = "background-size: cover;">
+  <header class="bg-secondary text-center p-3 mb-5 text-white">
+    <h1>Typing Master</h1>
+  </header>
+  <div class="container text-center">
+
+    
+    <!---dropdown right variation-->
+    <div class = "btn-group dropright mb-4">
+      <button type = "button" class = "btn btn-success" id = "diffbutton">Select Difficulty</button>
+      <button type = "button" class = "btn btn-primary dropdown-toggle px-3" data-toggle = "dropdown" aria-expanded="false" aria-haspopup="true">
+        <span class = "sr-only">Toggle Dropdown</span>
+      </button>
+
+      <div class = "dropdown-menu">
+        <button class = "btn btn-secondary dropdown-item" onclick = "changeDifficulty(1)">Easy</button>
+        <button class = "btn btn-secondary dropdown-item" onclick = "changeDifficulty(2)">Medium</button>
+        <button class = "btn btn-secondary dropdown-item" onclick = "changeDifficulty(3)">Hard</button>
+      </div>
+
+    </div>
+
+    <div>
+      <p>Current Difficulty is <span class="text text-success" id = "diff">Easy</span>
+      </p>
+    </div> 
+
+    <!-- Word & Input -->
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <p class="lead">Type The Given Word Within
+          <span class="text-success" id="seconds">5</span> Seconds:</p>
+        <h2 class="display-2 mb-5" id="current-word">hello</h2>
+        <input type="text" class="form-control form-control-lg" placeholder="Start typing..." id="word-input" autofocus>
+        <h4 class="mt-3" id="message"></h4>
+
+        <!-- Time & Score Columns -->
+        <div class="row mt-5">
+          <div class="col-md-6">
+            <h3>Time Left:
+              <span id="time">0</span>
+            </h3>
+          </div>
+          <div class="col-md-6">
+            <h3>Score:
+              <span id="score">0</span>
+            </h3>
+          </div>
+        </div>
+
+        <!-- Instructions -->
+        <div class="row mt-5">
+          <div class="col-md-12">
+            <div class="card card-body bg-secondary text-white">
+              <h5>Instructions</h5>
+              <p>Type each word in the given amount of seconds to score. To play again, just type the current word. Your score
+                will reset</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
